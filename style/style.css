@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../src/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.first-message {
+    min-width: 450px;
+    max-width: 590px;
+    position: fixed; 
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid #181617;
+    background: #F7F7EC;
+}
+
+.first-message p {
+    font-family: 'Instrument Serif';
+    font-size: 20px;
+    line-height: 100%;
+    color: #181617;
+    text-align: center;
+}
+
+.first-message span {
+    text-transform: uppercase;
+    color: #B28B2E;
+    font-family: 'Instrument Serif';
+    font-weight: 700;
+}
+
+.names-desktop {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;          /* Intenta ocupar todo el ancho disponible... */
+    max-width: 1309px;     /* ...pero nunca pases de 600px (o el ancho real de tu SVG) */
+    padding: 0 20px;      /* Un margen de seguridad a los lados para que no toque los bordes */
+    height: auto;         /* Mantiene la proporción correcta al escalar */
+}
+
+.names-mobile {
+    display: none; 
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 1. Mover el first-message más abajo */
+    .first-message {
+        top: 35%;
+        min-width: 90%; 
+    }
+
+    /* Ocultamos la imagen de desktop */
+    .names-desktop {
+        display: none;
+    }
+
+    /* Mostramos la imagen de móvil */
+    .names-mobile {
+        display: block;
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%; 
+        max-width: 300px;
+    }
+}
