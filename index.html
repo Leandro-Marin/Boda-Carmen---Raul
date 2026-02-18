@@ -1,37 +1,579 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda Carmen&Raul</title>
+    <title>Boda Carmen & Raúl</title>
 
-    <!-- Style -->
-    <link rel="stylesheet" href="style/style.css">
-
-    <!-- Google font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
-    <!-- Content box -->
-    <div class="first-message">
-        <p>Este lugar todavía está vistiéndose para la ocasión. <br>La web oficial de la boda llegará muy pronto, con todos
-            los detalles para acompañarnos en un día que promete ser <span>inolvidable.</span></p>
+    <!-- LOADING PAGE -->
+    <div id="loading-screen" class="loading-screen">
+        <!-- Lazo superior -->
+        <div class="ribbon ribbon-top"></div>
+        <!-- Lazo derecho -->
+        <div class="ribbon ribbon-right"></div>
+        <!-- Lazo inferior -->
+        <div class="ribbon ribbon-bottom"></div>
+        <!-- Lazo izquierdo -->
+        <div class="ribbon ribbon-left"></div>
 
-        <p>Mientras tanto, pueden respirar tranquilos: estamos preparando algo bonito, útil y fácil de usar, como debería ser todo lo importante.</p>
-
-        <p><span>Vuelve a visitarnos pronto.</span><br>El gran día se acerca… y esta página también. 💍✨</p>
+        <!-- Sello de lacre en el centro -->
+        <div class="wax-seal" id="wax-seal">
+            <!-- REEMPLAZO: Tu imagen creada -->
+            <img src="src/sello.svg" alt="Sello personalizado" class="custom-seal-img">
+            <p class="seal-text">Haz click para abrir</p>
+        </div>
     </div>
 
-    <!-- Imagen Desktop -->
-<img src="src/nome-sposi-desktop.svg" class="names-desktop" alt="Carmen & Raul">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <!-- Elemento decorativo inferior izquierda -->
+        <img src="src/flor-hero-uno.svg" alt="" class="hero-decoration-left">
 
-<!-- Imagen Mobile -->
-<img src="src/nome-sposi-mobile.svg" class="names-mobile" alt="Carmen & Raul">
+        <!-- Elemento decorativo superior derecha -->
+        <img src="src/flor-hero-dos.svg" alt="" class="hero-decoration-right">
+
+        <!-- NUEVA imagen centrada detrás -->
+        <img src="src/foto-invitación.webp" alt="" class="hero-photo" />
+
+        <!-- Tu contenido existente del hero -->
+        <img class="couple-names-mobile" src="src/nombres-novios-vertical-dark.svg" alt="Nombres de la pareja">
+        <img class="couple-names-desktop" src="src/nombres-novios-horizontal-dark.svg" alt="Nombres de la pareja">
+    </section>
+
+    <!-- INTRO / NOS CASAMOS -->
+    <section class="section-container intro">
+        <img src="src/corazon.svg" alt="icono corazón" class="heart-icon">
+        <p>¡Nos casamos!</p>
+        <p>Estamos muy emocionados de celebrar este día tan especial contigo. Aquí encontrarás toda la información que
+            necesitas: dónde será la ceremonia, cómo llegar, los horarios de la jornada y cómo confirmar tu asistencia,
+            además de indicarnos si utilizarás el servicio de autobús. También podrás comunicarnos cualquier alergia o
+            intolerancia para que todo esté perfectamente organizado.</p>
+        <p>¡Te esperamos el 16 de mayo!</p>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section"> <!-- Quitamos la clase 'section-container' aquí -->
+        <div class="section-container"> <!-- O un div nuevo wrapper -->
+            <h2 class="section-subtitle">CUENTA ATRÁS</h2>
+            <p class="section-title">Días que nos separan</p>
+
+            <div class="countdown-timer" id="countdown">
+                <div>
+                    <div class="time-box">
+                        <span id="days">00</span>
+                    </div>
+                    <span class="label">DÍAS</span>
+                </div>
+
+                <div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                    </div>
+                    <span class="label">HORAS</span>
+                </div>
+
+                <div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                    </div>
+                    <span class="label">MINUTOS</span>
+                </div>
+
+                <div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                    </div>
+                    <span class="label">SEGUNDOS</span>
+                </div>
+            </div>
+
+            <p class="date-text">Sábado, 16 de mayo de 2026 - 12:30h</p>
+        </div>
+    </section>
+
+    <!-- CEREMONIA -->
+    <section class="section-container ceremony">
+        <h2 class="section-subtitle">CEREMONIA</h2>
+        <p class="section-title">El “sí, quiero” será en la Colegiata de Santa María la Mayor.</p>
+        <div class="ceremony-image">
+            <img src="src/colegiata-santa-maria.webp" alt="Fachada Colegiata Santa María">
+        </div>
+
+        <a href="https://maps.app.goo.gl/Lw3j5jGocQPUiJJq7" class="btn-outline" target="_blank">Cómo llegar a la
+            ceremonia!</a>
+    </section>
+
+    <!-- SEPARADOR -->
+    <img src="src/separador.svg" alt="elemento decorativo para separar secciones" class="section-separator"
+        aria-hidden="true">
+
+    <!-- BANQUETE -->
+    <section class="section-container ceremony">
+        <h2 class="section-subtitle">BANQUETE</h2>
+        <p class="section-title">Tras la ceremonia, nos reunimos en Factoria Resort de Calatayud para celebrar.</p>
+        <div class="ceremony-image">
+            <img src="src/banquete.webp" alt="foto banquete Factoría Resort">
+        </div>
+
+        <a href="https://maps.app.goo.gl/sMFk4qw4kV1PAoLU8" class="btn-outline" target="_blank">Cómo llegar al
+            banquete!</a>
+    </section>
+
+    <!-- SEPARADOR -->
+    <img src="src/separador.svg" alt="elemento decorativo para separar secciones" class="section-separator"
+        aria-hidden="true">
+
+    <!-- TIMELINE -->
+    <section class="section-container timeline-section">
+        <h2 class="section-subtitle">PROGRAMA DEL DÍA</h2>
+        <p class="section-title">Un recorrido por cada instante que compartiremos juntos.</p>
+
+        <div class="timeline">
+            <!-- Evento 1 -->
+            <div class="timeline-item">
+                <div class="icon-circle">⛪</div> <!-- ¡Aquí está el círculo! -->
+                <div class="content">
+                    <div class="timeline-header">
+                        <span class="time">12.30h</span>
+                        <span class="event-name">Ceremonia</span>
+                    </div>
+                    <p>Colegiata Santa María La Mayor.</p>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="timeline-item">
+                <div class="icon-circle">🚌</div>
+                <div class="content">
+                    <div class="timeline-header">
+                        <span class="time">13.45h</span>
+                        <span class="event-name">Autobús</span>
+                    </div>
+                    <p>Salida del primer autobús de las Islas Canarias.</p>
+                </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="timeline-item">
+                <div class="icon-circle">🍸</div>
+                <div class="content">
+                    <div class="timeline-header">
+                        <span class="time">14.00h</span>
+                        <span class="event-name">Lunch</span>
+                    </div>
+                    <p>Empezamos picando algo: Factoría Resort.</p>
+                </div>
+            </div>
+
+            <!-- Evento 4 -->
+            <div class="timeline-item">
+                <div class="icon-circle">🍽️</div>
+                <div class="content">
+                    <div class="timeline-header">
+                        <span class="time">15.30h</span>
+                        <span class="event-name">Banquete</span>
+                    </div>
+                    <p>La cosa se pone seria.</p>
+                </div>
+            </div>
+
+            <!-- Evento 5 -->
+            <div class="timeline-item">
+                <div class="icon-circle">🎉</div>
+                <div class="content">
+                    <div class="timeline-header">
+                        <span class="time">19.00h</span>
+                        <span class="event-name">Fiesta</span>
+                    </div>
+                    <p>Damos comienzo a la barra libre.</p>
+                </div>
+            </div>
+
+            <!-- Evento 6 -->
+            <div class="timeline-item">
+                <div class="icon-circle">🚌</div>
+                <div class="content">
+                    <div class="timeline-header">
+                        <span class="time">22.00h</span>
+                        <span class="event-name">Autobús</span>
+                    </div>
+                    <p>Primer autobús para volver a descansar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <img src="src/separador.svg" alt="elemento decorativo para separar secciones" class="section-separator"
+        aria-hidden="true">
+
+    <!-- FAQ (ACORDEÓN) -->
+    <section class="section-container faq">
+        <h2 class="section-subtitle">PREGUNTAS FRECUENTES</h2>
+
+        <details class="faq-item">
+            <summary>¿Hay código de vestimenta?</summary>
+            <!-- NUEVA ESTRUCTURA NECESARIA PARA ANIMACIÓN EN SAFARI -->
+            <div class="faq-content-wrapper">
+                <div class="faq-content-inner">
+                    <p>El dress code es de ceremonia. Únicamente pedimos que nadie vaya vestido de blanco.</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Hay aparcamiento disponible en el lugar de la ceremonia?</summary>
+            <div class="faq-content-wrapper">
+                <div class="faq-content-inner">
+                    <p>Las zonas de aparcamiento por la zona son escasa por lo que recomendamos ir andando. Como alternativa, se puede aparcar en la Plaza de España, situada a unos 60 metros de la Colegiata.</p>
+                </div>
+
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Habrá servicio de autobuses?</summary>
+            <div class="faq-content-wrapper">
+                <div class="faq-content-inner">
+                    <p>Sí. A partir de las 13:45h habrá autobuses disponibles para los invitados desde la Fuente de las Islas Canarias (Calle Gáldar) hasta el Resort La Factoría, donde continuará la celebración. Los autobuses de regreso serán sobre las 22:00h y 00:00h.</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿La boda se celebra en interior o exterior?</summary>
+            <div class="faq-content-wrapper">
+                <div class="faq-content-inner">
+                    <p>El lunch y el banquete se celebrarán en el Resort La Factoría, combinando espacios interiores y
+                        exteriores según el momento del día y el clima. La ceremonia es en la Colegiata Mayor de Santa
+                        María, que es interior, y no depende del clima.</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cuándo y cómo debo confirmar mi asistencia?</summary>
+            <div class="faq-content-wrapper">
+                <div class="faq-content-inner">
+                    <p>Para confirmar tu asistencia, es obligatorio rellenar y enviar el formulario que encontrarás al
+                        final
+                        de esta página. Por favor, hazlo antes del 15 de abril para que podamos organizar todo
+                        correctamente.</p>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <!-- SEPARADOR -->
+    <img src="src/separador.svg" alt="elemento decorativo para separar secciones" class="section-separator"
+        aria-hidden="true">
+
+    <!-- FORMULARIO RSVP -->
+    <section class="section-container rsvp">
+        <h2 class="section-subtitle">CONFIRMA TU ASISTENCIA</h2>
+        <p class="section-title">Esperamos contar contigo</p>
+
+        <!-- Aggiungiamo 'name' al form per trovarlo con Javascript -->
+        <form name="submit-to-google-sheet" class="rsvp-form">
+
+            <div class="form-group">
+                <label for="name">Nombre completo*</label>
+                <!-- Aggiunto name="nombre" -->
+                <input type="text" id="name" name="nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (opcional)</label>
+                <!-- Aggiunto name="email" -->
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="form-group full-width">
+                <label>¿Asistirás?*</label>
+                <div class="radio-group">
+                    <!-- Aggiunto name="asistencia" -->
+                    <label><input type="radio" name="asistencia" value="Sí" checked> Sí, asistiré</label>
+                    <label><input type="radio" name="asistencia" value="No"> No podré asistir</label>
+                </div>
+            </div>
+
+            <div class="allergies-section">
+                <p>⚠️ Alergias e intolerancias alimentarias</p>
+                <div class="checkbox-grid">
+                    <!-- IMPORTANTE: Tutti devono avere name="alergias" e un value diverso -->
+                    <label><input type="checkbox" name="alergias" value="Gluten"> Gluten/celiaco</label>
+                    <label><input type="checkbox" name="alergias" value="Lactosa"> Lactosa</label>
+                    <label><input type="checkbox" name="alergias" value="Vegetariano"> Vegetariano</label>
+                    <label><input type="checkbox" name="alergias" value="Vegano"> Vegano</label>
+                    <label><input type="checkbox" name="alergias" value="Frutos secos"> Frutos secos</label>
+                    <label><input type="checkbox" name="alergias" value="Marisco"> Marisco</label>
+                </div>
+
+                <label for="other-allergies">Otras alergias o restricciones:</label>
+                <!-- Aggiunto name="otras_alergias" -->
+                <input type="text" id="other-allergies" name="otras_alergias" placeholder="Ej: alergia al huevo...">
+            </div>
+
+            <div class="form-group full-width">
+                <label for="message">Mensaje para los novios (opcional)</label>
+                <!-- Aggiunto name="mensaje" -->
+                <textarea id="message" name="mensaje" rows="4" placeholder="Escríbenos unas palabras..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <!-- Aggiunto un ID allo span per cambiare il testo mentre invia -->
+                <img src="src/avion.svg" alt="icono avion"> <span id="btn-text">ENVIAR CONFIRMACIÓN</span>
+            </button>
+
+            <!-- Messaggio di successo nascosto -->
+            <p id="success-message"
+                style="display:none; color:green; grid-column: 1/-1; margin-top:10px; font-weight:bold;">
+                ¡Gracias! Hemos recibido tu confirmación.
+            </p>
+        </form>
+
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <!-- Parte superior: Fecha en romano y Nombres -->
+            <div class="footer-main">
+                <!-- Imagen Footer Móvil -->
+                <img src="src/nombres-novios-vertical-crema.svg" alt="Carmen y Raúl" class="footer-names-mobile">
+
+                <!-- Imagen Footer Desktop/Tablet -->
+                <img src="src/nombres-novios-horizontal-crema.svg" alt="Carmen y Raúl" class="footer-names-desktop">
+            </div>
+
+            <!-- Fecha legible -->
+            <p class="date-text-footer">16 de mayo de 2026</p>
+
+            <!-- Firma (Recuperada) -->
+            <div class="firma">
+                <p>Diseñado con ♥ por Leandro Marín</p> <!-- O el texto que tenías -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+     ELEMENTOS DE AUDIO (BOTÓN Y ETIQUETA)
+========================================== -->
+
+    <!-- Botón de Control de Audio -->
+    <button id="audio-control" class="audio-btn" aria-label="Reproducir música">
+        <!-- Icono Sonido Activado (Ondas) -->
+        <svg class="icon-sound" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <!-- Icono Silencio (Tachado) - Visible por defecto -->
+        <svg class="icon-mute" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+    </button>
+
+    <!-- Etiqueta de Audio (Oculta) -->
+    <audio id="bg-music" loop>
+        <source src="src/cancion-boda.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- ==========================================
+     SCRIPTS UNIFICADOS (LÓGICA FUNCIONAL)
+========================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. REFERENCIAS GLOBALES
+            const loadingScreen = document.querySelector('.loading-screen');
+            const waxSeal = document.querySelector('.wax-seal');
+            const music = document.getElementById('bg-music');
+            const audioBtn = document.getElementById('audio-control');
+            const iconSound = document.querySelector('.icon-sound');
+            const iconMute = document.querySelector('.icon-mute');
+
+            // Referencias adicionales
+            const form = document.forms['submit-to-google-sheet'];
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxBYXqaf5I6n36XAcf7DbUgInGWcx17xUVPzPdWbg-jLhZjGDHHANwxaTJV3yGtO_yC1Q/exec';
+
+            // 2. FUNCIÓN AUXILIAR ICONOS
+            function updateAudioIcons(isPlaying) {
+                if (isPlaying) {
+                    if (iconSound) iconSound.style.display = 'block';
+                    if (iconMute) iconMute.style.display = 'none';
+                    if (audioBtn) audioBtn.setAttribute('aria-label', 'Silenciar');
+                } else {
+                    if (iconSound) iconSound.style.display = 'none';
+                    if (iconMute) iconMute.style.display = 'block';
+                    if (audioBtn) audioBtn.setAttribute('aria-label', 'Reproducir');
+                }
+            }
+
+            // 3. BLOQUEAR SCROLL INICIAL Y VOLVER ARRIBA
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual'; // Evita que el navegador restaure la posición
+            }
+            window.scrollTo(0, 0); // Fuerza ir al inicio (Hero)
+            document.body.style.overflow = 'hidden'; // Bloquea el scroll mientras carga
+
+
+            // 4. EVENTO DE ENTRADA (WAX SEAL)
+            if (waxSeal) {
+                waxSeal.addEventListener('click', () => {
+                    // Animación visual carga
+                    if (loadingScreen) loadingScreen.classList.add('clicked');
+
+                    // Intentar reproducir música
+                    if (music) {
+                        music.volume = 0.5;
+                        music.play().then(() => {
+                            updateAudioIcons(true);
+                        }).catch((error) => {
+                            console.log("Autoplay bloqueado:", error);
+                            updateAudioIcons(false); // Mostramos mute si falla
+                        });
+                    }
+
+                    // Desbloquear tras animación (1.2s)
+                    setTimeout(() => {
+                        if (loadingScreen) loadingScreen.classList.add('hidden');
+                        document.body.style.overflow = 'auto'; // Devolver scroll
+                        if (audioBtn) audioBtn.classList.add('visible'); // Mostrar botón audio
+                    }, 1200);
+                });
+            }
+
+            // 5. EVENTO BOTÓN DE AUDIO (CLICK ÚNICO)
+            if (audioBtn && music) {
+                audioBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation(); // Evita conflictos
+
+                    if (music.paused) {
+                        music.play();
+                        updateAudioIcons(true);
+                    } else {
+                        music.pause();
+                        updateAudioIcons(false);
+                    }
+                });
+            }
+
+            // 6. ANIMACIÓN ACORDEÓN (FAQ)
+            const detailsElements = document.querySelectorAll('details.faq-item');
+
+            detailsElements.forEach((detail) => {
+                const summary = detail.querySelector('summary');
+
+                // Usamos onclick directo para limpiar listeners anteriores
+                summary.onclick = (e) => {
+                    e.preventDefault(); // Control manual
+
+                    if (detail.hasAttribute('open')) {
+                        // CERRAR
+                        detail.classList.add('closing');
+                        setTimeout(() => {
+                            detail.removeAttribute('open');
+                            detail.classList.remove('closing');
+                        }, 400); // 400ms coinciden con CSS
+                    } else {
+                        // ABRIR
+                        detail.setAttribute('open', '');
+                    }
+                };
+            });
+
+            // 7. CUENTA ATRÁS (COUNTDOWN)
+            const targetDate = new Date("May 16, 2026 12:30:00").getTime();
+            if (document.getElementById("days")) {
+                const timer = setInterval(function () {
+                    const now = new Date().getTime();
+                    const distance = targetDate - now;
+
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById("days").innerText = days;
+                    document.getElementById("hours").innerText = hours;
+                    document.getElementById("minutes").innerText = minutes;
+                    document.getElementById("seconds").innerText = seconds;
+
+                    if (distance < 0) {
+                        clearInterval(timer);
+                        document.getElementById("countdown").innerHTML = "¡Llegó el día!";
+                    }
+                }, 1000);
+            }
+
+            // 8. ANIMACIONES AL SCROLL
+            const scrollTargets = document.querySelectorAll('.section-container, .countdown-section, .scroll-animate');
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            scrollTargets.forEach(el => {
+                el.classList.add('scroll-animate');
+                observer.observe(el);
+            });
+
+            // 9. FORMULARIO GOOGLE SHEETS
+            if (form) {
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    const btnText = document.getElementById('btn-text');
+                    const successMessage = document.getElementById('success-message');
+
+                    if (btnText) btnText.innerHTML = "ENVIANDO...";
+
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                        .then(response => {
+                            if (btnText) btnText.innerHTML = "¡ENVIADO!";
+                            if (successMessage) successMessage.style.display = 'block';
+                            form.reset();
+
+                            setTimeout(() => {
+                                if (btnText) btnText.innerHTML = "ENVIAR CONFIRMACIÓN";
+                                if (successMessage) successMessage.style.display = 'none';
+                            }, 5000);
+                        })
+                        .catch(error => {
+                            console.error('Error envío:', error.message);
+                            if (btnText) btnText.innerHTML = "ERROR";
+                        });
+                });
+            }
+        });
+    </script>
+
 
 </body>
 
